@@ -1,12 +1,12 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-interface fetchWikipediaImage {
+interface fetchWikipediaImageProps {
     q: string
 }
 
 export const fetchWikipediaImage = ({
     q
-}: fetchWikipediaImage) => {
+}: fetchWikipediaImageProps) => {
     const options: AxiosRequestConfig<any> = {
         method: 'GET',
         url: 'https://en.wikipedia.org/w/api.php',

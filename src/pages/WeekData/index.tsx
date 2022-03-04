@@ -37,13 +37,6 @@ export const WeekWeatherPage: React.FC = () => {
 
     useEffect(() => {
         if (cityName.length === 0) {
-            setState({
-                fetchState: 'idle',
-                errorMessage: '',
-                cityData: state.cityData,
-                weatherData: state.weatherData,
-                selectedDate: ''
-            });
             return
         }
 
@@ -136,7 +129,7 @@ export const WeekWeatherPage: React.FC = () => {
                 {state.fetchState === 'loading' && <Spinner />}
                 {state.fetchState === 'rejected' && <ErrorMessage message={state.errorMessage} />}
             </Styled.FetchStatusWrapper>
-            
+
             <Styled.ResultsWrapper>
                 {displayWeatherData && weatherData.map((weather, index) => (
                     <Styled.CardWrapper key={index}>

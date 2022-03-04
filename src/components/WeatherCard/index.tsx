@@ -45,7 +45,7 @@ export const WeatherCard = ({ weather }: WeatherCardProps) => {
     return (
         <Styled.CardContainer>
             <Styled.Description>
-                <img src={WeatherIcon} />
+                <img src={WeatherIcon} alt='weather-icon' />
                 <p>{weather.description}</p>
             </Styled.Description>
             <Styled.Section>

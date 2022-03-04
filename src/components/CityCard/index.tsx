@@ -28,8 +28,8 @@ export const CityCard: React.FC<CityCardProps> = ({
         return (
             <Styled.CardContainer>
                 {thumbnail.length > 0
-                    ? (<img src={thumbnail} />)
-                    : <img src={CityImg} />}
+                    ? (<img src={thumbnail} alt="city-thumbnail" />)
+                    : <img src={CityImg} alt="random-city" />}
                 <Styled.DataWrapper>
                     <p>City: <span>{city.name}</span></p>
                     <p>Country: <span>{city.country}</span></p>
@@ -41,7 +41,7 @@ export const CityCard: React.FC<CityCardProps> = ({
     } else {
         return (
             <Styled.CardContainer>
-                <img src={CityImg} />
+                <img src={CityImg} alt="random-city" />
                 <Styled.DataWrapper>
                     <p>City: <span>-</span></p>
                     <p>Country: <span>-</span></p>

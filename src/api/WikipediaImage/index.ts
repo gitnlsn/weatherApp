@@ -10,9 +10,6 @@ export const fetchWikipediaImage = ({
     const options: AxiosRequestConfig<any> = {
         method: 'GET',
         url: 'https://en.wikipedia.org/w/api.php',
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
     };
 
     const params = {
@@ -25,7 +22,8 @@ export const fetchWikipediaImage = ({
         piprop: 'thumbnail',
         pithumbsize: 600,
         pilimit: 20,
-        gpslimit: 1
+        gpslimit: 1,
+        origin: '*'
     }
 
     return axios.request({

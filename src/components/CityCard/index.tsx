@@ -19,6 +19,7 @@ export const CityCard: React.FC<CityCardProps> = ({
         if (!city) {
             return;
         }
+        setThumbnail('');
         fetchWikipediaImage({ q: city.name })
             .then(url => setThumbnail(url))
             .catch(() => setThumbnail(''));

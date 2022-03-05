@@ -10,13 +10,14 @@ export const CardContainer = styled.div`
     align-items: center;
 
     padding: 8px;
-    border: 1px solid;
-    box-shadow: 0px 0px 1px 1px #aaa;
+    box-shadow: 0px 0px 1px 1px #000;
+    background-color: #90E0EF;
 
     img {
         height: 100%;
         border: 2px solid;
         margin-right: 8px;
+        background-color: white;
     }
 `;
 

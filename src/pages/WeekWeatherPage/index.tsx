@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetch5Day3HourData } from '../../api/OpenWeatherApp';
+import { groupByDate, getDates } from "../../utils/groupWeatherData";
 import { CityRequest } from '../../api/OpenWeatherApp/CityRequest';
 import { WeatherRequest } from '../../api/OpenWeatherApp/WeatherRequest';
 
@@ -11,10 +12,9 @@ import { CityInput } from '../../components/CityInput';
 import { CityCard } from '../../components/CityCard';
 import { WeatherCard } from '../../components/WeatherCard';
 import { ErrorMessage } from "../../components/ErrorMessage";
+import { DaySelector } from "../../components/DaySelector";
 
 import * as Styled from './styles';
-import { groupByDate, getDates } from "../../utils/groupWeatherData";
-import { DaySelector } from "../../components/DaySelector";
 
 type PageState = {
     fetchState: 'idle' | 'loading' | 'rejected' | 'resolved';
@@ -98,8 +98,10 @@ export const WeekWeatherPage: React.FC = () => {
 
     return (
         <Styled.Container>
-            <Styled.Title>Weather App</Styled.Title>
-            <Styled.Subtitle>Enter city name to get the weather</Styled.Subtitle>
+            <Styled.Header>
+                <Styled.Title>Weather App</Styled.Title>
+                <Styled.Subtitle>Enter city name to get the weather</Styled.Subtitle>
+            </Styled.Header>
 
             <Styled.CityWrapper>
                 <CityCard city={state.cityData} />

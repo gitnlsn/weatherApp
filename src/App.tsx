@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { WeekWeatherPage } from './pages/WeekData';
+import { WeekWeatherPage } from './pages/WeekWeatherPage';
 
 import { GlobalStyles } from './pages/styles/GlobalStyles';
 

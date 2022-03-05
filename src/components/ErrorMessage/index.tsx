@@ -12,7 +12,8 @@ const Error = styled.p`
     padding: 16px;
     justify-content: center;
 
-    color: red;
+    color: black;
+    font-weight: bold;
     background-color: pink;
     border-left: 8px solid red;
 `

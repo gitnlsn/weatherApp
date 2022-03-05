@@ -8,9 +8,9 @@ export const CardContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    background-color: goldenrod;
 
-    border: 1px solid;
-    box-shadow: 0px 0px 1px 1px #ccc;
+    box-shadow: 0px 0px 1px 1px #000;
 `;
 
 export const Description = styled.div`
@@ -22,7 +22,10 @@ export const Description = styled.div`
     align-items: center;
 
     img {
+        background-color: white;
+        padding: 8px;
         margin: 8px;
+        border: 1px solid;
         width: 64px;
         height: 64px;
     }

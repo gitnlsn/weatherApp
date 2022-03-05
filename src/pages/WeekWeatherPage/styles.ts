@@ -3,7 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
+    background-color: #CAF0F8;
+    height: 100vh;
+`;
 
+export const Header = styled.header`
+    background-color: #00B4D8;
+    /* color: white; */
     padding: 16px 56px;
 `;
 
@@ -37,6 +43,7 @@ export const ResultsWrapper = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 16px 56px;
 
     margin-top: 8px;
     overflow-x: auto;
@@ -47,6 +54,7 @@ export const FetchStatusWrapper = styled.div`
     align-items: center;
     justify-content: center;
     margin-top: 16px;
+    min-width: 150px;
 `;
 
 export const CardWrapper = styled.div`
